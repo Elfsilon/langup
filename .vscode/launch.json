@@ -11,6 +11,8 @@
       "args": [
         "--flavor",
         "dev",
+        "--dart-define",
+        "APP_FLAVOR=dev",
       ]
     },
     {
@@ -21,6 +23,8 @@
       "args": [
         "--flavor",
         "prod",
+        "--dart-define",
+        "APP_FLAVOR=prod",
       ]
     },
     {
@@ -31,6 +35,8 @@
       "args": [
         "--flavor",
         "prod",
+        "--dart-define",
+        "APP_FLAVOR=prod",
       ]
     }
   ]
