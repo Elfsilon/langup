@@ -12,7 +12,7 @@ class AppRoot extends StatelessWidget {
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       db.collection("test").doc("FfEdpxaQqbXzLZzeGfAp").get().then(
-            (value) => print(value.toString()),
+            (value) => print("RESULT: ${value.data().toString()}"),
           );
     });
 
