@@ -17,8 +17,9 @@ class WordUnitLabelAdapter extends TypeAdapter<WordUnitLabel> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return WordUnitLabel(
+      id: fields[0] as String,
       title: fields[1] as String,
-    )..id = fields[0] as String;
+    );
   }
 
   @override

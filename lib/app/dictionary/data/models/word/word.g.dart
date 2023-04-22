@@ -17,12 +17,13 @@ class WordAdapter extends TypeAdapter<Word> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return Word(
+      id: fields[0] as String,
       units: (fields[2] as List).cast<WordUnit>(),
       name: fields[1] as String,
       points: fields[4] == null ? 0 : fields[4] as int,
       priority: fields[3] == null ? 0 : fields[3] as int,
       collectionId: fields[5] as int?,
-    )..id = fields[0] as String;
+    );
   }
 
   @override
