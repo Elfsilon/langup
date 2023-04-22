@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:langup/app_root.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:langup/firebase_options/firebase_config.dart';
+import 'package:langup/core/utils/hive/hive_utils.dart';
 
 void main() async {
   await initApp();
@@ -11,8 +10,12 @@ void main() async {
 Future<void> initApp() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  final firebaseConfig = FirebaseConfig.fromEnvironment();
-  await Firebase.initializeApp(
-    options: firebaseConfig.options,
-  );
+  // final firebaseConfig = FirebaseConfig.fromEnvironment();
+  // await Firebase.initializeApp(
+  //   options: firebaseConfig.options,
+  // );
+
+  await HiveUtils.init();
+  await HiveUtils.openBoxes();
+  // HiveUtils.clearBoxes();
 }

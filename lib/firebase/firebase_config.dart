@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:langup/firebase_options/firebase_options_dev.dart'
+import 'package:langup/firebase/firebase_options_dev.dart'
     as firebase_options_dev;
-import 'package:langup/firebase_options/firebase_options_prod.dart'
+import 'package:langup/firebase/firebase_options_prod.dart'
     as firebase_options_prod;
 import 'package:langup/core/utils/app_environment.dart';
 
