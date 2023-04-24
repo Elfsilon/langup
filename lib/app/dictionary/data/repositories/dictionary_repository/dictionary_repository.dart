@@ -5,9 +5,7 @@ import 'package:langup/core/utils/hive/hive_utils.dart';
 
 final dictionaryRepositoryProvider = Provider<DictionaryRepository>(
   (ref) => DictionaryRepositoryHive(
-    wordsBox: HiveUtils.wordsBox(),
-    labelsBox: HiveUtils.labelsBox(),
-    collectionsBox: HiveUtils.collectionsBox(),
+    box: HiveUtils.wordsBox(),
   ),
 );
 

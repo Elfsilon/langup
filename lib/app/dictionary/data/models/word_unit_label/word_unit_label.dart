@@ -10,6 +10,14 @@ class WordUnitLabel extends HiveObject {
     required this.title,
   });
 
+  WordUnitLabel copyWith({
+    String? title,
+  }) =>
+      WordUnitLabel(
+        id: id,
+        title: title ?? this.title,
+      );
+
   @HiveField(0)
   String id;
 

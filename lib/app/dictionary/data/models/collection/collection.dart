@@ -10,6 +10,14 @@ class Collection extends HiveObject {
     required this.title,
   });
 
+  Collection copyWith({
+    String? title,
+  }) =>
+      Collection(
+        id: id,
+        title: title ?? this.title,
+      );
+
   @HiveField(0)
   String id;
 
